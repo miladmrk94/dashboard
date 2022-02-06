@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Admin</title>
+  </head>
+  <body>
+    <input type="checkbox" name="" id="menu-toggle" />
+    <div class="overlay">
+      <label for="menu-toggle">
+        <span></span>
+      </label>
+    </div>
+
+    <div class="sidebar" id="mySidebar">
+      <div class="sidebar-container">
+        <div class="brand">
+          <h3>MRK</h3>
+        </div>
+
+        <div class="sidebar-avatar">
+          <img
+            class="profile-img"
+            src="./images/istockphoto.jpg"
+            alt="avatar"
+          />
+          <h4>Ryan Morris</h4>
+          <span>1030-1234-567</span>
+        </div>
+
+        <div class="sidebar-menu">
+          <ul>
+            <li>
+              <a href="">
+                <i class="fa fa-home iconFW"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa fa-user"></i>
+
+                <span>Accounts</span>
+              </a>
+            </li>
+            <li>
+              <a href="" class="active">
+                <i class="fa fa-credit-card"></i>
+
+                <span>Cards</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa fa-users"></i>
+
+                <span>Contacts</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa fa-calculator"></i>
+
+                <span>Loans</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa fa-cog"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <div class="sidbar-card__name">
+            <h5>Scheduled Payments</h5>
+            <a href="">
+              <span class="i-one"> <i class="fa fa-circle"></i></span>
+
+              <span>Monthly Rent</span>
+            </a>
+            <a href="">
+              <span class="i-two"><i class="fa fa-circle"></i></span>
+
+              <span>Food Payment</span>
+            </a>
+            <a href="">
+              <span class="i-three"> <i class="fa fa-circle"></i></span>
+
+              <span>Utility Bills</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content" id="main">
+      <div class="div-center">
+        <div class="div-searche">
+          <label for="menu-toggle">
+            <span class="bar"><i class="fa fa-bars fa-2xl"></i></span>
+          </label>
+
+          <div class="input-icons">
+            <span class="icon-searche">
+              <i class="fa fa-search fa-sm"></i
+            ></span>
+
+            <input class="input-field" type="text" placeholder="Crypto" />
+          </div>
+          <span class="bar">
+            <i class="fa fa-bell fa-2xl"></i>
+          </span>
+        </div>
+
+        <div class="div-items">
+          <h3>Crypto Live Price</h3>
+          <div class="items"></div>
+        </div>
+
+        <div class="div-chart">
+          <div>
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+        <div class="div-Contacts">
+          <h3>Recent Transaction</h3>
+          <div class="recent">
+            <div class="recent-item">
+              <img src="./images/download.jpg" alt="" />
+              <div class="user">
+                <h4>Douglas C. Womack</h4>
+                <span>1278965413654</span>
+              </div>
+              <samp class="time">21 May 2022 - 11:30</samp>
+              <samp class="price"> -12,324 ETH</samp>
+            </div>
+            <div class="recent-item">
+              <img src="./images/istockphoto-1290599844-170667a.jpg" alt="" />
+              <div class="user">
+                <h4>Beth Ferguson</h4>
+                <span>1237235345</span>
+              </div>
+              <samp class="time">21 May 2022 - 13:00</samp>
+              <samp class="price-two"> +8,56 ETH</samp>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="div-cart">
+        <div class="div-time">
+          <h3>10/1/2022 13:00</h3>
+        </div>
+        <div class="div-mYcart">
+          <section id="slider">
+            <input type="radio" name="slider" id="s1" />
+            <input type="radio" name="slider" id="s2" checked />
+            <input type="radio" name="slider" id="s3" />
+            <input type="radio" name="slider" id="s4" />
+            <input type="radio" name="slider" id="s5" />
+            <label for="s1" id="slide1">
+              <div class="logo">
+                <img
+                  class="img-box"
+                  src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNTlweCIgaGVpZ2h0PSIzN3B4IiB2aWV3Qm94PSIwIDAgNTkgMzciIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+QkFBNDNCNjUtNzcwQS00MzlFLUI3RjItOEE1NjkyMUI0QzYzPC90aXRsZT4KICAgIDxnIGlkPSJXZWxjb21lIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iTGFuZGluZyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTExODUuMDAwMDAwLCAtMjAuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJMb2dvIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMTg1LjAwMDAwMCwgMjAuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBmaWxsPSIjZmZmIiBjeD0iMTQuMDI1OTc0IiBjeT0iMi4zMzc2NjIzNCIgcj0iMi4zMzc2NjIzNCI+PC9jaXJjbGU+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNDQuNDE1NTg0NCwxNS4wNzc5MjIxIEw0NC40MTU1ODQ0LDI2LjE4MTgxODIgTDQ0LjQxNTU4NDQsMjYuMTgxODE4MiBDNDQuNDE1NTg0NCwyOC42MzYxODMgNDYuMjM0OTI0NCwzMC41MDY0OTM1IDQ4LjYyMzM3NjYsMzAuNTA2NDkzNSBDNTAuOTg3OTQ0MywzMC41MDY0OTM1IDUyLjgzMTE2ODgsMjguNjM1OTExOCA1Mi44MzA1ODk0LDI2LjI1MzMzNDYgTDUyLjgzMTA0ODcsMTUuMDc3OTIyMSBDNTIuODMxMjM1MiwxMy40NjQxNDk5IDU0LjEzOTQ3NDYsMTIuMTU1OTY0MyA1NS43NTMyNDY4LDEyLjE1NTg0NDIgTDU4LjY3NTMyNDcsMTIuMTU1ODQ0MiBMNTguNjc1MzI0NywxMi4xNTU4NDQyIEw1OC42NzUzMjQ3LDI1Ljk0ODA1MTkgQzU4LjY3NTMyNDcsMzEuNDk5NTg5NiA1NC4xNzQ5MTQyLDM2IDQ4LjYyMzM3NjYsMzYgQzQzLjA3MTgzOSwzNiAzOC41NzE0Mjg2LDMxLjQ5OTU4OTYgMzguNTcxNDI4NiwyNS45NDgwNTE5IEwzOC41NzE0Mjg2LDEyLjE1NTg0NDIgTDQxLjQ5MzUwNjUsMTIuMTU1ODQ0MiBDNDMuMTA3MzI1NiwxMi4xNTU4NDQyIDQ0LjQxNTU4NDQsMTMuNDY0MTAzIDQ0LjQxNTU4NDQsMTUuMDc3OTIyMSBaIiBpZD0iQ29tYmluZWQtU2hhcGUiIGZpbGw9IiNmZmYiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTMwLjk3NDAyNiwzLjI3MjcyNzI3IEwzMy44OTYxMDM5LDMuMjcyNzI3MjcgTDMzLjg5NjEwMzksMy4yNzI3MjcyNyBMMzMuODk2MTAzOSwzMy4wNzc5MjIxIEMzMy44OTYxMDM5LDM0LjY5MTc0MTIgMzIuNTg3ODQ1LDM2IDMwLjk3NDAyNiwzNiBMMjguMDUxOTQ4MSwzNiBMMjguMDUxOTQ4MSwzNiBMMjguMDUxOTQ4MSw2LjE5NDgwNTE5IEMyOC4wNTE5NDgxLDQuNTgwOTg2MTIgMjkuMzYwMjA2OSwzLjI3MjcyNzI3IDMwLjk3NDAyNiwzLjI3MjcyNzI3IFoiIGlkPSJSZWN0YW5nbGUiIGZpbGw9IiNmZmYiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik01Ljg0NDE1NTg0LDMuMjcyNzI3MjcgTDUuODQ0MDI0MTQsMTQuMzY4NjcwMSBDNy42OTM4NjQxOCwxMi42OTI4MjIxIDEwLjA1MzMyOTMsMTEuNjg4MzExNyAxMi42MjMzNzY2LDExLjY4ODMxMTcgQzE4LjU2MjIzMDgsMTEuNjg4MzExNyAyMy4zNzY2MjM0LDE3LjA1MjE3MyAyMy4zNzY2MjM0LDIzLjY2ODgzMTIgQzIzLjM3NjYyMzQsMjMuNzE5MzA1MSAyMy4zNzYzNDMyLDIzLjc2OTcwNjIgMjMuMzc1Nzg0NSwyMy44MjAwMzI2IEMyMy4zNzYzNjA4LDIzLjg2NjkwODkgMjMuMzc2NjIzNCwyMy45MTM5NDIzIDIzLjM3NjYyMzQsMjMuOTYxMDM5IEMyMy4zNzU3ODQ1LDMwLjc5ODUzNDkgMTguMTQzNTg4LDM2IDExLjY4ODMxMTcsMzYgQzUuMzQ2OTU0MjcsMzYgMC4xODUwNzk2NCwzMC43OTg1MzQ5IDAuMDA0ODY3MTQ0MDYsMjQuMzExODQ5NCBMMCwyNC4zMTE2ODgzIEwwLDYuMTk0ODA1MTkgQzAsNC41NzEwMDY0MSAxLjMyMzM5NjM2LDMuMjcyNzI3MjcgMi45MjIwNzc5MiwzLjI3MjcyNzI3IEw1Ljg0NDE1NTg0LDMuMjcyNzI3MjcgWiBNMTEuNTcxNDI4NiwxNy4wNjQ5MzUxIEM4LjIxNDY4NDksMTcuMDY0OTM1MSA1LjQ5MzUwNjQ5LDIwLjA3MzkzMDQgNS40OTM1MDY0OSwyMy43ODU3MTQzIEM1LjQ5MzUwNjQ5LDI3LjQ5NzQ5ODIgOC4yMTQ2ODQ5LDMwLjUwNjQ5MzUgMTEuNTcxNDI4NiwzMC41MDY0OTM1IEMxNC45MjgxNzIyLDMwLjUwNjQ5MzUgMTcuNjQ5MzUwNiwyNy40OTc0OTgyIDE3LjY0OTM1MDYsMjMuNzg1NzE0MyBDMTcuNjQ5MzUwNiwyMC4wNzM5MzA0IDE0LjkyODE3MjIsMTcuMDY0OTM1MSAxMS41NzE0Mjg2LDE3LjA2NDkzNTEgWiIgaWQ9IkNvbWJpbmVkLVNoYXBlIiBmaWxsPSIjZmZmIiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+"
+                  width="60"
+                  alt="bluBank"
+                />
+              </div>
+
+              <span class="title-box">bank, but loverly</span>
+              <img class="E-bank" src="./images/q.svg" alt="" />
+            </label>
+            <label for="s2" id="slide2">
+              <div class="logo">
+                <span class="title-box">MasterCard</span>
+                <img
+                  class="img-box"
+                  src="./images/q.svg"
+                  width="60"
+                  alt="bluBank"
+                />
+                <span class="title-box">5232 1245 6521 3654</span>
+                <span class="title-box">12/23</span>
+                <span class="title-box">Ryan Morris</span>
+              </div>
+
+              <div class="mastercard">
+                <img
+                  class="E-bank"
+                  src="https://cdn.worldvectorlogo.com/logos/mastercard-2.svg"
+                  alt=""
+                />
+              </div>
+            </label>
+            <label for="s3" id="slide3"> </label>
+            <label for="s4" id="slide4"></label>
+            <label for="s5" id="slide5"></label>
+          </section>
+        </div>
+        <div class="div-addCart"><div>Add Cart</div></div>
+        <div class="div-engine">
+          <div class="box">
+            <i class="fa fa-bolt icon"></i>
+
+            <span>GPUs mining</span>
+
+            <input type="checkbox" class="toggle" checked />
+          </div>
+          <div class="box">
+            <i class="fa fa-bolt icon"></i>
+
+            <span>CPUs mining</span>
+
+            <input type="checkbox" class="toggle" checked />
+          </div>
+
+          <div class="box">
+            <i class="fa fa-bolt icon"></i>
+
+            <span>Est. daily USD</span>
+
+            <input type="checkbox" class="toggle" checked />
+          </div>
+
+          <div class="box">
+            <i class="fa fa-bolt icon"></i>
+
+            <span>Team Membes</span>
+
+            <input type="checkbox" class="toggle" checked />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
+      integrity="sha512-fzff82+8pzHnwA1mQ0dzz9/E0B+ZRizq08yZfya66INZBz86qKTCt9MLU0NCNIgaMJCgeyhujhasnFUsYMsi0Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"
+      integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
