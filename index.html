@@ -125,10 +125,90 @@
           <h3>Crypto Live Price</h3>
           <div class="items"></div>
         </div>
-
         <div class="div-chart">
-          <canvas id="myChart"></canvas>
-        </div>
+          <div class="show-btc" >
+            <script type="text/javascript">
+              baseUrl = "https://widgets.cryptocompare.com/";
+              var scripts = document.getElementsByTagName("script");
+              var embedder = scripts[ scripts.length - 1 ];
+              var cccTheme = {"General":{"background":"#333","borderColor":"#545454","borderRadius":"4px 4px 0 0"},"Header":{"background":"#000","color":"#FFF"},"Followers":{"background":"#f7931a","color":"#FFF","borderColor":"#e0bd93","counterBorderColor":"#fdab48","counterColor":"#f5d7b2"},"Data":{"priceColor":"#FFF","infoLabelColor":"#CCC","infoValueColor":"#CCC"},"Chart":{"fillColor":"rgba(86,202,158,0.5)","borderColor":"#56ca9e"},"Conversion":{"background":"#000","color":"#999"}};
+              (function (){
+              var appName = encodeURIComponent(window.location.hostname);
+              if(appName==""){appName="local";}
+              var s = document.createElement("script");
+              s.type = "text/javascript";
+              s.async = true;
+              var theUrl = baseUrl+'serve/v1/coin/chart?fsym=BTC&tsym=USD';
+              s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+              embedder.parentNode.appendChild(s);
+              })();
+              </script>
+              
+          </div>
+         
+          <div class="show-eth" >
+            <script type="text/javascript">
+              baseUrl = "https://widgets.cryptocompare.com/";
+              var scripts = document.getElementsByTagName("script");
+              var embedder = scripts[ scripts.length - 1 ];
+              var cccTheme = {"General":{"background":"#05eb6d00","border":"none"
+,"borderColor":"#54545400","borderRadius":"4px 4px 0 0"},"Header":{"background":"#00000","color":"#FFF"},"Followers":{"background":"#f7931a","color":"#FFF","borderColor":"#e0bd93","counterBorderColor":"#fdab48","counterColor":"#f5d7b2"},"Data":{"priceColor":"#FFF","infoLabelColor":"#CCC","infoValueColor":"#CCC"},"Chart":{"fillColor":"rgba(86,202,158,0.5)","borderColor":"#56ca9e"},"Conversion":{"background":"#000","color":"#999"}};
+              (function (){
+              var appName = encodeURIComponent(window.location.hostname);
+              if(appName==""){appName="local";}
+              var s = document.createElement("script");
+              s.type = "text/javascript";
+              s.async = true;
+              var theUrl = baseUrl+'serve/v1/coin/chart?fsym=ETH&tsym=USD';
+              s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+              embedder.parentNode.appendChild(s);
+              })();
+              </script>
+              
+          </div>
+
+          <div class="show-ltc" >
+            <script type="text/javascript">
+              baseUrl = "https://widgets.cryptocompare.com/";
+              var scripts = document.getElementsByTagName("script");
+              var embedder = scripts[ scripts.length - 1 ];
+              var cccTheme = {"General":{"background":"#05eb6d00","border":"none"
+,"borderColor":"#54545400","borderRadius":"4px 4px 0 0"},"Header":{"background":"#00000","color":"#FFF"},"Followers":{"background":"#f7931a","color":"#FFF","borderColor":"#e0bd93","counterBorderColor":"#fdab48","counterColor":"#f5d7b2"},"Data":{"priceColor":"#FFF","infoLabelColor":"#CCC","infoValueColor":"#CCC"},"Chart":{"fillColor":"rgba(86,202,158,0.5)","borderColor":"#56ca9e"},"Conversion":{"background":"#000","color":"#999"}};
+              (function (){
+              var appName = encodeURIComponent(window.location.hostname);
+              if(appName==""){appName="local";}
+              var s = document.createElement("script");
+              s.type = "text/javascript";
+              s.async = true;
+              var theUrl = baseUrl+'serve/v1/coin/chart?fsym=LTC&tsym=USD';
+              s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+              embedder.parentNode.appendChild(s);
+              })();
+              </script>
+              
+          </div>
+
+          <div class="show-usdt" >
+            <script type="text/javascript">
+              baseUrl = "https://widgets.cryptocompare.com/";
+              var scripts = document.getElementsByTagName("script");
+              var embedder = scripts[ scripts.length - 1 ];
+              var cccTheme = {"General":{"background":"#05eb6d00","border":"none"
+,"borderColor":"#54545400","borderRadius":"4px 4px 0 0"},"Header":{"background":"#00000","color":"#FFF"},"Followers":{"background":"#f7931a","color":"#FFF","borderColor":"#e0bd93","counterBorderColor":"#fdab48","counterColor":"#f5d7b2"},"Data":{"priceColor":"#FFF","infoLabelColor":"#CCC","infoValueColor":"#CCC"},"Chart":{"fillColor":"rgba(86,202,158,0.5)","borderColor":"#56ca9e"},"Conversion":{"background":"#000","color":"#999"}};
+              (function (){
+              var appName = encodeURIComponent(window.location.hostname);
+              if(appName==""){appName="local";}
+              var s = document.createElement("script");
+              s.type = "text/javascript";
+              s.async = true;
+              var theUrl = baseUrl+'serve/v1/coin/chart?fsym=USDT&tsym=USD';
+              s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+              embedder.parentNode.appendChild(s);
+              })();
+              </script>
+              
+          </div>
+
         <div class="div-Contacts">
           <h3>Recent Transaction</h3>
           <div class="recent">
@@ -142,13 +222,13 @@
               <samp class="price-two"> +8,56 ETH</samp>
             </div>
             <div class="recent-item">
-              <img src="./images/istockphoto-1290599844-170667a.jpg" alt="" />
+              <img src="./images/download.jpg" alt="" />
               <div class="user">
                 <span>Beth Ferguson</span>
               </div>
               <span>1235469874513</span>
               <samp class="time">21 May 2022 - 13:00</samp>
-              <samp class="price-two"> +8,56 ETH</samp>
+              <samp class="price-one"> -3,03 ETH</samp>
             </div>
           </div>
         </div>
@@ -239,6 +319,7 @@
       </section>
     </div>
 
+   
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
       integrity="sha512-fzff82+8pzHnwA1mQ0dzz9/E0B+ZRizq08yZfya66INZBz86qKTCt9MLU0NCNIgaMJCgeyhujhasnFUsYMsi0Q=="

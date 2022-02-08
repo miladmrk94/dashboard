@@ -41,42 +41,54 @@ async function show() {
       divItems.innerHTML = "";
       CRYPTO.forEach((item, index) => {
         divItems.innerHTML += `
-                <div class="box">
+                <div class="box" onclick="myFunction(${index})" >
+              
                 <img
                 src="https://www.cryptocompare.com${item.img}"
                 alt="btc"
+                
               />
               <span> ${item.name}</span>
-              <span>${item.price}</span>
-                </div>  
+                </div> 
+           
               `;
       });
     });
 }
 
+const btc = document.querySelector(".show-btc");
+const eth = document.querySelector(".show-eth");
+const ltc = document.querySelector(".show-ltc");
+const usdt = document.querySelector(".show-usdt");
+
+const myFunction = (index) => {
+  console.log("btn:" + index);
+  if (index === 0) {
+    eth.style.display = "none";
+    ltc.style.display = "none";
+    usdt.style.display = "none";
+    btc.style.display = "block";
+  } else if (index === 1) {
+    eth.style.display = "block";
+    ltc.style.display = "none";
+    usdt.style.display = "none";
+    btc.style.display = "none";
+  } else if (index === 2) {
+    eth.style.display = "none";
+    ltc.style.display = "block";
+    usdt.style.display = "none";
+    btc.style.display = "none";
+  } else if (index === 3) {
+    eth.style.display = "none";
+    ltc.style.display = "none";
+    usdt.style.display = "block";
+    btc.style.display = "none";
+  }
+};
+
+myFunction();
+
 show();
-
-const labels = ["January", "February", "March", "April", "May", "June"];
-
-const data = {
-  labels: labels,
-  datasets: [
-    {
-      label: "My First dataset",
-      backgroundColor: "rgb(255, 99, 132)",
-      borderColor: "rgb(255, 99, 132)",
-      data: [38.6724, 33.6724, 36.6724, 28.6724, 37.6724, 32.6724, 38.6724],
-    },
-  ],
-};
-
-const config = {
-  type: "line",
-  data: data,
-  options: {},
-};
-
-const myChart = new Chart(document.getElementById("myChart"), config);
 
 const time = () => {
   let date = new Date();
@@ -97,7 +109,7 @@ const time = () => {
   const showTime = document.querySelector(".div-time");
   showTime.innerHTML = `
 
-  <span class="show-time" >${time}</span>
+  <h4 class="show-time" >${time}</h4>
   `;
 };
 
