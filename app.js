@@ -1,3 +1,5 @@
+//------------------
+
 async function show() {
   let CRYPTO;
 
@@ -44,7 +46,8 @@ async function show() {
                 src="https://www.cryptocompare.com${item.img}"
                 alt="btc"
               />
-              <span>${item.price} ${item.name}</span>
+              <span> ${item.name}</span>
+              <span>${item.price}</span>
                 </div>  
               `;
       });
@@ -74,3 +77,29 @@ const config = {
 };
 
 const myChart = new Chart(document.getElementById("myChart"), config);
+
+const time = () => {
+  let date = new Date();
+  let hh = date.getHours();
+  let mm = date.getMinutes();
+  let ss = date.getSeconds();
+
+  if (hh == 0) {
+    hh = 12;
+  }
+
+  hh = hh < 10 ? "0" + hh : hh;
+  mm = mm < 10 ? "0" + mm : mm;
+  ss = ss < 10 ? "0" + ss : ss;
+
+  let time = hh + ":" + mm + ":" + ss;
+
+  const showTime = document.querySelector(".div-time");
+  showTime.innerHTML = `
+
+  <span class="show-time" >${time}</span>
+  `;
+};
+
+time();
+setInterval(time, 1000);

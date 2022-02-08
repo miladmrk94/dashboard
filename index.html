@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -11,24 +12,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
     <link rel="stylesheet" href="./css/main.css" />
-    <title>Admin</title>
+    <title>Dashboard</title>
   </head>
   <body>
+    <!-- menu-toggle -->
     <input type="checkbox" name="" id="menu-toggle" />
     <div class="overlay">
-      <label for="menu-toggle">
-        <span></span>
-      </label>
+      <label for="menu-toggle"></label>
     </div>
-
+    <!-- ---Sidebar--- -->
     <div class="sidebar" id="mySidebar">
       <div class="sidebar-container">
         <div class="brand">
           <h3>MRK</h3>
         </div>
-
         <div class="sidebar-avatar">
           <img
             class="profile-img"
@@ -36,7 +34,7 @@
             alt="avatar"
           />
           <h4>Ryan Morris</h4>
-          <span>1030-1234-567</span>
+          <span>ID: 1030-1234-567</span>
         </div>
 
         <div class="sidebar-menu">
@@ -71,7 +69,6 @@
             <li>
               <a href="">
                 <i class="fa fa-calculator"></i>
-
                 <span>Loans</span>
               </a>
             </li>
@@ -98,16 +95,15 @@
             </a>
             <a href="">
               <span class="i-three"> <i class="fa fa-circle"></i></span>
-
               <span>Utility Bills</span>
             </a>
           </div>
         </div>
       </div>
     </div>
-
+    <!-- ---Main Content--- -->
     <div class="main-content" id="main">
-      <div class="div-center">
+      <section class="section-center">
         <div class="div-searche">
           <label for="menu-toggle">
             <span class="bar"><i class="fa fa-bars fa-2xl"></i></span>
@@ -131,39 +127,35 @@
         </div>
 
         <div class="div-chart">
-          <div>
-            <canvas id="myChart"></canvas>
-          </div>
+          <canvas id="myChart"></canvas>
         </div>
         <div class="div-Contacts">
           <h3>Recent Transaction</h3>
           <div class="recent">
             <div class="recent-item">
-              <img src="./images/download.jpg" alt="" />
+              <img src="./images/istockphoto-1290599844-170667a.jpg" alt="" />
               <div class="user">
-                <h4>Douglas C. Womack</h4>
-                <span>1278965413654</span>
+                <span>Janet Pointer</span>
               </div>
-              <samp class="time">21 May 2022 - 11:30</samp>
-              <samp class="price"> -12,324 ETH</samp>
+              <span>6879543647123</span>
+              <samp class="time">21 May 2022 - 13:00</samp>
+              <samp class="price-two"> +8,56 ETH</samp>
             </div>
             <div class="recent-item">
               <img src="./images/istockphoto-1290599844-170667a.jpg" alt="" />
               <div class="user">
-                <h4>Beth Ferguson</h4>
-                <span>1237235345</span>
+                <span>Beth Ferguson</span>
               </div>
+              <span>1235469874513</span>
               <samp class="time">21 May 2022 - 13:00</samp>
               <samp class="price-two"> +8,56 ETH</samp>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="div-cart">
-        <div class="div-time">
-          <h3>10/1/2022 13:00</h3>
-        </div>
+      <section class="section-cart">
+        <div class="div-time"></div>
         <div class="div-mYcart">
           <section id="slider">
             <input type="radio" name="slider" id="s1" />
@@ -244,7 +236,7 @@
             <input type="checkbox" class="toggle" checked />
           </div>
         </div>
-      </div>
+      </section>
     </div>
 
     <script
