@@ -42,7 +42,6 @@ async function show() {
       CRYPTO.forEach((item, index) => {
         divItems.innerHTML += `
                 <div class="box" onclick="myFunction(${index})" >
-              
                 <img
                 src="https://www.cryptocompare.com${item.img}"
                 alt="btc"
@@ -56,37 +55,24 @@ async function show() {
     });
 }
 
-const btc = document.querySelector(".show-btc");
-const eth = document.querySelector(".show-eth");
-const ltc = document.querySelector(".show-ltc");
-const usdt = document.querySelector(".show-usdt");
-
+const cryptoTag = [
+  document.querySelector(".show-btc"),
+  document.querySelector(".show-eth"),
+  document.querySelector(".show-ltc"),
+  document.querySelector(".show-usdt"),
+];
 const myFunction = (index) => {
-  console.log("btn:" + index);
-  if (index === 0) {
-    eth.style.display = "none";
-    ltc.style.display = "none";
-    usdt.style.display = "none";
-    btc.style.display = "block";
-  } else if (index === 1) {
-    eth.style.display = "block";
-    ltc.style.display = "none";
-    usdt.style.display = "none";
-    btc.style.display = "none";
-  } else if (index === 2) {
-    eth.style.display = "none";
-    ltc.style.display = "block";
-    usdt.style.display = "none";
-    btc.style.display = "none";
-  } else if (index === 3) {
-    eth.style.display = "none";
-    ltc.style.display = "none";
-    usdt.style.display = "block";
-    btc.style.display = "none";
-  }
+  cryptoTag.forEach((item, x) => {
+    if (x === index) {
+      item.style.display = "block";
+      item.style.animation = "fadein 1s";
+    } else {
+      item.style.display = "none";
+    }
+  });
 };
-
 myFunction();
+document.querySelector(".show-btc").style.display = "block";
 
 show();
 
@@ -106,7 +92,7 @@ const time = () => {
 
   let time = hh + ":" + mm + ":" + ss;
 
-  const showTime = document.querySelector(".div-time");
+  const showTime = document.querySelector(".time-box");
   showTime.innerHTML = `
 
   <h4 class="show-time" >${time}</h4>

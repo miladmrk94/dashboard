@@ -184,7 +184,6 @@ body {
 }
 
 .main-content {
-  height: 95vh;
   width: calc(100vw - 300px);
   transition: margin-left 300ms;
   transition: all 300ms;
@@ -195,26 +194,20 @@ body {
   margin-left: 300px;
   .section-center {
     transition: all 300ms;
-    height: 90%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 700px));
-    grid-template-rows: 0.6fr 0.9fr 1.5fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 750px));
+    grid-template-rows: 0.4fr 0.7fr auto;
     gap: 0px 0px;
     grid-template-areas:
       "div-searche"
       "div-items"
-      "div-chart"
-      "div-Contacts";
-
+      "div-chart";
     .div-searche {
       grid-area: div-searche;
-
       display: flex;
       justify-content: space-evenly;
       align-items: center;
       color: $whit;
-      margin-top: 2rem;
-
       .bar {
         margin: 1rem;
       }
@@ -222,7 +215,6 @@ body {
       .input-icons {
         width: 100%;
         margin-bottom: 10px;
-
         .icon-searche {
           padding: 10px;
           color: $whit;
@@ -252,12 +244,15 @@ body {
       word-spacing: 0.3rem;
       font-family: "Baloo Bhaijaan 2";
       font-size: $font-size-medium;
+      h3 {
+        margin-left: 0.5rem;
+      }
       .items {
         display: flex;
         justify-content: space-evenly;
         .box {
-          width: 150px;
-          height: 180px;
+          width: 130px;
+          height: 130px;
           background-color: #3b474b5d;
           display: flex;
           flex-direction: column;
@@ -276,6 +271,7 @@ body {
     .div-chart {
       grid-area: div-chart;
       padding: 0.6rem;
+      animation: fadein 2s;
       .show-btc {
       }
       .show-eth,
@@ -283,58 +279,57 @@ body {
       .show-usdt {
         display: none;
       }
-    }
-    .div-Contacts {
-      grid-area: div-Contacts;
-      font-family: "Baloo Bhaijaan 2";
-      h3 {
-        color: $whit;
-        font-size: $font-size-large;
-      }
-      .recent {
-        margin: 0.3rem;
-        display: flex;
-        flex-direction: column;
-        font-size: $font-size-medium;
-
-        .recent-item {
+      .div-Contacts {
+        font-family: "Baloo Bhaijaan 2";
+        h3 {
+          color: $whit;
+          font-size: $font-size-large;
+        }
+        .recent {
           margin: 0.3rem;
           display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-around;
-          background-color: #161616;
-          border-radius: 1rem;
-          padding: 0.3rem;
-          color: $whit;
-          text-align: center;
-          .user {
-            width: 130px;
-            padding-right: 1rem;
-          }
-          font-weight: 500;
-          .price {
-            color: #f87148;
+          flex-direction: column;
+          font-size: $font-size-medium;
+
+          .recent-item {
+            margin: 0.3rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #161616;
+            border-radius: 1rem;
             padding: 0.3rem;
-          }
-          .time {
-            color: #5a5a5a;
-            margin-left: 1rem;
-          }
-          .price-one {
-            color: #db5757;
-            padding: 0.3rem;
-          }
-          .price-two {
-            color: #5ada93;
-            padding: 0.3rem;
-          }
-          img {
-            width: 55px;
-            height: 55px;
-            border-radius: 55px * 2;
-            margin-right: 1rem;
-            padding: 0.2rem;
+            color: $whit;
+            text-align: center;
+            .user {
+              width: 130px;
+              padding-right: 1rem;
+            }
+            font-weight: 500;
+            .price {
+              color: #f87148;
+              padding: 0.3rem;
+            }
+            .time {
+              color: #5a5a5a;
+              margin-left: 1rem;
+            }
+            .price-one {
+              color: #db5757;
+              padding: 0.3rem;
+            }
+            .price-two {
+              color: #5ada93;
+              padding: 0.3rem;
+            }
+            img {
+              width: 55px;
+              height: 55px;
+              border-radius: 55px * 2;
+              margin-right: 1rem;
+              padding: 0.2rem;
+            }
           }
         }
       }
@@ -346,7 +341,7 @@ body {
     transition: all 300ms ease-in-out;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 3fr));
-    grid-template-rows: 0.6fr 0.9fr 0.6fr 1.9fr;
+    grid-template-rows: 120px 0.9fr 0.6fr 1.9fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -356,11 +351,20 @@ body {
       "div-engine";
     align-items: center;
     text-align: center;
+    margin-top: 1rem;
 
     .div-time {
+      height: 120px;
       grid-area: div-time;
       text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .time-box {
+        width: 100%;
 
+        margin-bottom: 4rem;
+      }
       .show-time {
         padding-top: 4rem;
         padding-bottom: 1rem;
@@ -526,6 +530,7 @@ body {
     .div-addCart {
       grid-area: div-addCart;
       margin: auto;
+      margin-top: 3rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -548,15 +553,45 @@ body {
       grid-area: div-engine;
       display: flex;
       flex-direction: column;
-      align-items: center;
       width: 100%;
       height: 100%;
-      justify-content: flex-start;
+      justify-content: center;
+      align-items: center;
+      .engine-comp {
+        width: 200px;
+      }
       .box {
         width: 300px;
         height: 60px;
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 2rem;
+
+        .icon {
+          width: 25px;
+          color: $whit;
+
+          height: 25px;
+          padding: 1rem;
+          background-color: #ffcc3f;
+          font-size: $font-size-XXlarge;
+          border-radius: 1rem;
+          box-shadow: 0 0 3px #c6f321, 0 0 10px #f38721, 0 0 20px #f3cd21;
+        }
+        span {
+          font-family: "Baloo Bhaijaan 2";
+          font-size: $font-size-medium;
+          color: $whit;
+          margin: 0 2rem 0rem 2rem;
+        }
+      }
+
+      .box-cpu {
+        width: 300px;
+        height: 60px;
+        display: flex;
+        justify-content: flex-start;
         align-items: center;
         margin-top: 2rem;
 
@@ -564,10 +599,61 @@ body {
           width: 25px;
           height: 25px;
           padding: 1rem;
-          background-color: #f7e371;
+          color: $whit;
+          background-color: #793dfd;
           font-size: $font-size-XXlarge;
           border-radius: 1rem;
-          box-shadow: 0 0 3px #c6f321, 0 0 10px #f38721, 0 0 20px #f3cd21;
+          box-shadow: 0 0 3px #6649a5, 0 0 10px #9b66f0, 0 0 20px #7f4fbd;
+        }
+        span {
+          font-family: "Baloo Bhaijaan 2";
+          font-size: $font-size-medium;
+          color: $whit;
+          margin: 0 2rem 0rem 2rem;
+        }
+      }
+      .box-est {
+        width: 300px;
+        height: 60px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 2rem;
+
+        .icon {
+          width: 25px;
+          height: 25px;
+          padding: 1rem;
+          color: $whit;
+          background-color: #e07334;
+          font-size: $font-size-XXlarge;
+          border-radius: 1rem;
+          box-shadow: 0 0 3px #e9885c, 0 0 10px #f07840, 0 0 20px #e4861c;
+        }
+        span {
+          font-family: "Baloo Bhaijaan 2";
+          font-size: $font-size-medium;
+          color: $whit;
+          margin: 0 2rem 0rem 2rem;
+        }
+      }
+      .box-membes {
+        width: 300px;
+        height: 60px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 2rem;
+
+        .icon {
+          width: 25px;
+          height: 25px;
+          padding: 1rem;
+          color: $whit;
+          background-color: #3484e0;
+          font-size: $font-size-XXlarge;
+          border-radius: 1rem;
+          box-shadow: 0 0 3px #2590b1, 0 0 10px #408cf0, 0 0 20px #1c4be4;
         }
         span {
           font-family: "Baloo Bhaijaan 2";
@@ -660,5 +746,14 @@ body {
   }
   .recent img {
     margin-right: auto;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

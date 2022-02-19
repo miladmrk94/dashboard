@@ -214,7 +214,6 @@ body {
 }
 
 .main-content {
-  height: 95vh;
   width: calc(100vw - 300px);
   -webkit-transition: margin-left 300ms;
   transition: margin-left 300ms;
@@ -234,15 +233,14 @@ body {
 .main-content .section-center {
   -webkit-transition: all 300ms;
   transition: all 300ms;
-  height: 90%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 700px))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 700px));
-  -ms-grid-rows: 0.6fr 0.9fr 1.5fr 1fr;
-      grid-template-rows: 0.6fr 0.9fr 1.5fr 1fr;
+  -ms-grid-columns: (minmax(250px, 750px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 750px));
+  -ms-grid-rows: 0.4fr 0.7fr auto;
+      grid-template-rows: 0.4fr 0.7fr auto;
   gap: 0px 0px;
-      grid-template-areas: "div-searche" "div-items" "div-chart" "div-Contacts";
+      grid-template-areas: "div-searche" "div-items" "div-chart";
 }
 
 .main-content .section-center .div-searche {
@@ -259,7 +257,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: #eaebec;
-  margin-top: 2rem;
 }
 
 .main-content .section-center .div-searche .bar {
@@ -303,6 +300,10 @@ body {
   font-size: 1.1rem;
 }
 
+.main-content .section-center .div-items h3 {
+  margin-left: 0.5rem;
+}
+
 .main-content .section-center .div-items .items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -313,8 +314,8 @@ body {
 }
 
 .main-content .section-center .div-items .items .box {
-  width: 150px;
-  height: 180px;
+  width: 130px;
+  height: 130px;
   background-color: #3b474b5d;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -342,6 +343,8 @@ body {
   -ms-grid-column: 1;
   grid-area: div-chart;
   padding: 0.6rem;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
 
 .main-content .section-center .div-chart .show-eth,
@@ -350,19 +353,16 @@ body {
   display: none;
 }
 
-.main-content .section-center .div-Contacts {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: div-Contacts;
+.main-content .section-center .div-chart .div-Contacts {
   font-family: "Baloo Bhaijaan 2";
 }
 
-.main-content .section-center .div-Contacts h3 {
+.main-content .section-center .div-chart .div-Contacts h3 {
   color: #eaebec;
   font-size: 1.3rem;
 }
 
-.main-content .section-center .div-Contacts .recent {
+.main-content .section-center .div-chart .div-Contacts .recent {
   margin: 0.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -374,7 +374,7 @@ body {
   font-size: 1.1rem;
 }
 
-.main-content .section-center .div-Contacts .recent .recent-item {
+.main-content .section-center .div-chart .div-Contacts .recent .recent-item {
   margin: 0.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,32 +396,32 @@ body {
   font-weight: 500;
 }
 
-.main-content .section-center .div-Contacts .recent .recent-item .user {
+.main-content .section-center .div-chart .div-Contacts .recent .recent-item .user {
   width: 130px;
   padding-right: 1rem;
 }
 
-.main-content .section-center .div-Contacts .recent .recent-item .price {
+.main-content .section-center .div-chart .div-Contacts .recent .recent-item .price {
   color: #f87148;
   padding: 0.3rem;
 }
 
-.main-content .section-center .div-Contacts .recent .recent-item .time {
+.main-content .section-center .div-chart .div-Contacts .recent .recent-item .time {
   color: #5a5a5a;
   margin-left: 1rem;
 }
 
-.main-content .section-center .div-Contacts .recent .recent-item .price-one {
+.main-content .section-center .div-chart .div-Contacts .recent .recent-item .price-one {
   color: #db5757;
   padding: 0.3rem;
 }
 
-.main-content .section-center .div-Contacts .recent .recent-item .price-two {
+.main-content .section-center .div-chart .div-Contacts .recent .recent-item .price-two {
   color: #5ada93;
   padding: 0.3rem;
 }
 
-.main-content .section-center .div-Contacts .recent .recent-item img {
+.main-content .section-center .div-chart .div-Contacts .recent .recent-item img {
   width: 55px;
   height: 55px;
   border-radius: 110px;
@@ -437,8 +437,8 @@ body {
   display: grid;
   -ms-grid-columns: (minmax(150px, 3fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(150px, 3fr));
-  -ms-grid-rows: 0.6fr 0.9fr 0.6fr 1.9fr;
-      grid-template-rows: 0.6fr 0.9fr 0.6fr 1.9fr;
+  -ms-grid-rows: 120px 0.9fr 0.6fr 1.9fr;
+      grid-template-rows: 120px 0.9fr 0.6fr 1.9fr;
   gap: 0px 0px;
   grid-auto-flow: row;
       grid-template-areas: "div-time" "div-mYcart" "div-addCart" "div-engine";
@@ -446,13 +446,29 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  margin-top: 1rem;
 }
 
 .main-content .section-cart .div-time {
+  height: 120px;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: div-time;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-content .section-cart .div-time .time-box {
+  width: 100%;
+  margin-bottom: 4rem;
 }
 
 .main-content .section-cart .div-time .show-time {
@@ -665,6 +681,7 @@ body {
   -ms-grid-column: 1;
   grid-area: div-addCart;
   margin: auto;
+  margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -702,14 +719,18 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+}
+
+.main-content .section-cart .div-engine .engine-comp {
+  width: 200px;
 }
 
 .main-content .section-cart .div-engine .box {
@@ -718,8 +739,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -728,9 +750,10 @@ body {
 
 .main-content .section-cart .div-engine .box .icon {
   width: 25px;
+  color: #eaebec;
   height: 25px;
   padding: 1rem;
-  background-color: #f7e371;
+  background-color: #ffcc3f;
   font-size: 2rem;
   border-radius: 1rem;
   -webkit-box-shadow: 0 0 3px #c6f321, 0 0 10px #f38721, 0 0 20px #f3cd21;
@@ -738,6 +761,108 @@ body {
 }
 
 .main-content .section-cart .div-engine .box span {
+  font-family: "Baloo Bhaijaan 2";
+  font-size: 1.1rem;
+  color: #eaebec;
+  margin: 0 2rem 0rem 2rem;
+}
+
+.main-content .section-cart .div-engine .box-cpu {
+  width: 300px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.main-content .section-cart .div-engine .box-cpu .icon {
+  width: 25px;
+  height: 25px;
+  padding: 1rem;
+  color: #eaebec;
+  background-color: #793dfd;
+  font-size: 2rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0 3px #6649a5, 0 0 10px #9b66f0, 0 0 20px #7f4fbd;
+          box-shadow: 0 0 3px #6649a5, 0 0 10px #9b66f0, 0 0 20px #7f4fbd;
+}
+
+.main-content .section-cart .div-engine .box-cpu span {
+  font-family: "Baloo Bhaijaan 2";
+  font-size: 1.1rem;
+  color: #eaebec;
+  margin: 0 2rem 0rem 2rem;
+}
+
+.main-content .section-cart .div-engine .box-est {
+  width: 300px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.main-content .section-cart .div-engine .box-est .icon {
+  width: 25px;
+  height: 25px;
+  padding: 1rem;
+  color: #eaebec;
+  background-color: #e07334;
+  font-size: 2rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0 3px #e9885c, 0 0 10px #f07840, 0 0 20px #e4861c;
+          box-shadow: 0 0 3px #e9885c, 0 0 10px #f07840, 0 0 20px #e4861c;
+}
+
+.main-content .section-cart .div-engine .box-est span {
+  font-family: "Baloo Bhaijaan 2";
+  font-size: 1.1rem;
+  color: #eaebec;
+  margin: 0 2rem 0rem 2rem;
+}
+
+.main-content .section-cart .div-engine .box-membes {
+  width: 300px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.main-content .section-cart .div-engine .box-membes .icon {
+  width: 25px;
+  height: 25px;
+  padding: 1rem;
+  color: #eaebec;
+  background-color: #3484e0;
+  font-size: 2rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0 3px #2590b1, 0 0 10px #408cf0, 0 0 20px #1c4be4;
+          box-shadow: 0 0 3px #2590b1, 0 0 10px #408cf0, 0 0 20px #1c4be4;
+}
+
+.main-content .section-cart .div-engine .box-membes span {
   font-family: "Baloo Bhaijaan 2";
   font-size: 1.1rem;
   color: #eaebec;
@@ -832,6 +957,24 @@ body {
   }
   .recent img {
     margin-right: auto;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */
